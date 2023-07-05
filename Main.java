@@ -51,6 +51,14 @@ public class Main {
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
 
+    // Problem 6: Calculating the power of a number
+    public static int power(int a, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        return a * power(a, n - 1);
+    }
+
     // Running code
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -93,5 +101,13 @@ public class Main {
         int fibonacciNum = scanner.nextInt();
         int fibonacciResult = fibonacci(fibonacciNum);
         System.out.println(fibonacciResult);
+
+        // Problem 6: Calculating the power of a number
+        System.out.print("Enter the base: ");
+        int base = scanner.nextInt();
+        System.out.print("Enter the exponent: ");
+        int exponent = scanner.nextInt();
+        int powerResult = power(base, exponent);
+        System.out.println(powerResult);
     }
 }
