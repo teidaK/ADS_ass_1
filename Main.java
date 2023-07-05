@@ -43,6 +43,14 @@ public class Main {
         return n * factorial(n - 1);
     }
 
+    // Problem 5: Finding the n-th element in the Fibonacci sequence
+    public static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        }
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
     // Running code
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -79,5 +87,11 @@ public class Main {
         int factorialNum = scanner.nextInt();
         int factorialResult = factorial(factorialNum);
         System.out.println(factorialResult);
+
+        // Problem 5: Finding the n-th element in the Fibonacci sequence
+        System.out.print("Enter a number: ");
+        int fibonacciNum = scanner.nextInt();
+        int fibonacciResult = fibonacci(fibonacciNum);
+        System.out.println(fibonacciResult);
     }
 }
