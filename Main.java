@@ -70,12 +70,6 @@ public class Main {
         reverseArray(arr, start + 1, end - 1);
     }
 
-    public static int binomialCoefficient(int n, int k) {
-        if (k == 0 || k == n) {
-            return 1;
-        }
-        return binomialCoefficient(n - 1, k - 1) + binomialCoefficient(n - 1, k);
-    }
 
     // Problem 8: Checking if a string consists only of digits
     public static boolean consistsOfDigits(String s) {
@@ -85,6 +79,14 @@ public class Main {
             }
         }
         return true;
+    }
+
+    // Problem 9: Finding the binomial coefficient C(n, k)
+    public static int binomialCoefficient(int n, int k) {
+        if (k == 0 || k == n) {
+            return 1;
+        }
+        return binomialCoefficient(n - 1, k - 1) + binomialCoefficient(n - 1, k);
     }
 
     // Running code
@@ -157,5 +159,12 @@ public class Main {
         boolean consistsOfDigits = consistsOfDigits(str);
         System.out.println(str + (consistsOfDigits ? " Yes" : " No"));
 
+        // Problem 9: Finding the binomial coefficient C(n, k)
+        System.out.print("Enter n: ");
+        int n1 = scanner.nextInt();
+        System.out.print("Enter k: ");
+        int k1 = scanner.nextInt();
+        int binomialCoefficientResult = binomialCoefficient(n1, k1);
+        System.out.println(binomialCoefficientResult);
     }
 }
