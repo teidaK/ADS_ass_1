@@ -70,6 +70,23 @@ public class Main {
         reverseArray(arr, start + 1, end - 1);
     }
 
+    public static int binomialCoefficient(int n, int k) {
+        if (k == 0 || k == n) {
+            return 1;
+        }
+        return binomialCoefficient(n - 1, k - 1) + binomialCoefficient(n - 1, k);
+    }
+
+    // Problem 8: Checking if a string consists only of digits
+    public static boolean consistsOfDigits(String s) {
+        for (char c : s.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     // Running code
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -133,6 +150,12 @@ public class Main {
         for (int num : arr3) {
             System.out.print(num + " ");
         }
+
+        // Problem 8: Checking if a string consists only of digits
+        System.out.print("Enter a string: ");
+        String str = scanner.next();
+        boolean consistsOfDigits = consistsOfDigits(str);
+        System.out.println(str + (consistsOfDigits ? " Yes" : " No"));
 
     }
 }
