@@ -12,9 +12,10 @@ public class Main {
         }
         return min;
     }
+
+    // Running code
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-
         // Problem 1: Finding the minimum element in an array
         System.out.print("Enter the number of elements: ");
         int n = scanner.nextInt();
@@ -25,5 +26,7 @@ public class Main {
         }
         int minElement = findMinimum(arr1);
         System.out.println(minElement);
+
+
     }
 }
