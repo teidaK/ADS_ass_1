@@ -35,6 +35,14 @@ public class Main {
         return true;
     }
 
+    // Problem 4: Finding the factorial of a number
+    public static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        }
+        return n * factorial(n - 1);
+    }
+
     // Running code
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -65,5 +73,11 @@ public class Main {
         int num1 = scanner.nextInt();
         boolean isPrimeNum1 = isPrime(num1);
         System.out.println(num1 + (isPrimeNum1 ? " is Prime" : " is Composite"));
+
+        // Problem 4: Finding the factorial of a number
+        System.out.print("Enter a number: ");
+        int factorialNum = scanner.nextInt();
+        int factorialResult = factorial(factorialNum);
+        System.out.println(factorialResult);
     }
 }
