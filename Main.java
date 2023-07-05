@@ -13,6 +13,15 @@ public class Main {
         return min;
     }
 
+    // Problem 2: Calculating the average of an array
+    public static double calculateAverage(int[] arr) {
+        int sum = 0;
+        for (int num : arr) {
+            sum += num;
+        }
+        return (double) sum / arr.length;
+    }
+
     // Running code
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -27,6 +36,15 @@ public class Main {
         int minElement = findMinimum(arr1);
         System.out.println(minElement);
 
-
+        // Problem 2: Calculating the average of an array
+        System.out.print("Enter the number of elements: ");
+        n = scanner.nextInt();
+        int[] arr2 = new int[n];
+        System.out.print("Enter the elements: ");
+        for (int i = 0; i < n; i++) {
+            arr2[i] = scanner.nextInt();
+        }
+        double average = calculateAverage(arr2);
+        System.out.println(average);
     }
 }
